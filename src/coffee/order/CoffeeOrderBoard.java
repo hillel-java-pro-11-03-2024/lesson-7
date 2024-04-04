@@ -7,7 +7,7 @@ import java.util.Queue;
 public class CoffeeOrderBoard {
 
   private int lastIndex = 0;
-  Queue<Order> orders = new LinkedList<>();
+  private final Queue<Order> orders = new LinkedList<>();
 
   public void add(String customerName) {
     lastIndex++;
