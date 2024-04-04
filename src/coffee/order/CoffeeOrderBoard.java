@@ -14,20 +14,19 @@ public class CoffeeOrderBoard {
     orders.add(new Order(lastIndex, customerName));
   }
 
-  public Order deliver() {
-    return orders.poll();
+  public void deliver() {
+    orders.poll();
   }
 
-  public Order deliver(int index) {
+  public void deliver(int index) {
     Iterator<Order> iterator = orders.iterator();
     while (iterator.hasNext()) {
       Order order = iterator.next();
       if (order.getOrderId() == index) {
         iterator.remove();
-        return order;
+        return;
       }
     }
-    return null;
   }
 
   public void draw() {
